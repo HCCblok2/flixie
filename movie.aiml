@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+ <category>
+    <pattern> <set>recommendation</set> movie</pattern>
+    <template>
+     Did I understand it correctly that you are looking for a movie?
+    </template>
+  </category>
+  
+  <category>
+    <pattern>yes</pattern>
+     <that>Did I understand it correctly that you are looking for a movie</that>
+    <template>What kind of movie do you want to watch?</template>
+  </category>
+  
+ <category>
+    <pattern>no</pattern>
+     <that>Did I understand it correctly that you are looking for a movie</that>
+    <template> Do you want to watch a  tv show instead? </template>
+  </category>
+  
+   <category>
+    <pattern>yes</pattern>
+     <that>Do you want to watch a tv show instead</that>
+    <template> What kind of  tv show do you want to watch?</template>
+  </category>
+  
+</aiml>
