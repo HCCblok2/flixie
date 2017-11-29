@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+
  <category>
     <pattern> <set>recommendation</set> movie</pattern>
     <template>
      Did I understand it correctly that you are looking for a movie?
     </template>
   </category>
+  
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <condition name="medium" value="tv show">
+            What type of tv show are you looking for?
+        </condition>
+        <condition name="medium" value="movie">
+            What type of movie are you looking for?
+        </condition>
+    </template>
+</category>
+  
+ <category>
+     <pattern>MOVIE</pattern>
+     <template>Okay, <set name="medium">movie</set> it is!</template>
+ </category>
+ 
+ <category>
+     <pattern>TV SHOW</pattern>
+     <template>Okay, <set name="medium">tv show</set> it is!</template>
+ </category>
+ 
+ <category>
+     <pattern>WHAT DO I WANT</pattern>
+     <template>You want to see a <get name="medium"/></template>
+ </category>
   
   <category>
     <pattern>yes</pattern>
