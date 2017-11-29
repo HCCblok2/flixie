@@ -16,13 +16,13 @@
  <category>
     <pattern>no</pattern>
      <that>Did I understand it correctly that you are looking for a movie</that>
-    <template> Do you want to watch a  tv show instead? </template>
+    <template>Do you want to watch a tv show instead? </template>
   </category>
   
    <category>
     <pattern>yes</pattern>
      <that>Do you want to watch a tv show instead</that>
-    <template> What kind of  tv show do you want to watch?</template>
+    <template>What kind of tv show do you want to watch?</template>
   </category>
   
 </aiml>

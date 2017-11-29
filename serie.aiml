@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     <category>
-    <pattern> <set>recommendation</set> serie</pattern>
+    <pattern> <set>recommendation</set> tv show</pattern>
     <template>
      Did I understand it correctly that you are looking for a tv show?
     </template>
@@ -10,7 +10,7 @@
   <category>
     <pattern>yes</pattern>
      <that>Did I understand it correctly that you are looking for a tv show</that>
-    <template>What kind of serie do you want to watch?</template>
+    <template>What kind of tv show do you want to watch?</template>
   </category>
   
  <category>
@@ -26,14 +26,26 @@
   </category>
   
     <category>
-    <pattern>horror</pattern>
+    <pattern>comedy</pattern>
      <that>What kind of tv show do you want to watch</that>
-    <template> horror, nice choice! With who do you want to watch the tv show?</template>
+    <template>Comedy, nice choice! With who do you want to watch?</template>
+  </category>
+  
+  <category>
+     <pattern>action</pattern>
+     <that>What kind of tv show do you want to watch</that>
+     <template>Action, nice choice! With whom do you want to watch?</template>
+  </category>
+  
+  <category>
+     <pattern>drama</pattern>
+     <that>What kind of tv show do you want to watch</that>
+     <template>Drama, nice choice! With whom do you want to watch?</template>
   </category>
   
    <category>
     <pattern>my sister</pattern>
-     <that>With who do you want to watch the tv show</that>
+     <that>With whom do you want to watch</that>
     <template>Is any of the watchers of the tv show under age?</template>
   </category>
   
@@ -43,6 +55,11 @@
     <template>Sorry, none of the recommendations are suitable for this age group</template>
   </category>
   
+  <category>
+    <pattern>no</pattern>
+     <that>Is any of the watchers of the tv show under age</that>
+    <template>Sorry, none of the recommendations are suitable for this age group</template>
+  </category>
   
   
 </aiml>

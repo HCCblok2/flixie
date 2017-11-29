@@ -2,7 +2,7 @@
 <aiml>
   <category>
     <pattern> <set>recommendation</set> a recommendation </pattern>
-    <template> HI I'm Flixie and I can help you! Are you looking for a movie or a serie?</template>
+    <template> Hi! I'm Flixie and I can help you! Are you looking for a movie or a tv shows?</template>
   </category>
 
  <category>
