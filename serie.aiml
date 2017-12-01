@@ -1,65 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-    <category>
-    <pattern> <set>recommendation</set> tv show</pattern>
-    <template>
-     Did I understand it correctly that you are looking for a tv show?
-    </template>
-  </category>
-  
-  <category>
-    <pattern>yes</pattern>
-     <that>Did I understand it correctly that you are looking for a tv show</that>
-    <template>What kind of tv show do you want to watch?</template>
+
+ <!-- MEDIUM -->
+ <category>
+      <pattern><set>recommendation</set>SERIE</pattern>
+      <template> <think><set name="medium">serie</set></think>
+      Heb ik het goed begrepen dat je een <set name="medium">serie</set> wilt kijken?
+      </template>
   </category>
   
  <category>
-    <pattern>no</pattern>
-     <that>Did I understand it correctly that you are looking for a tv show</that>
-    <template> Do you want to watch a movie instead? </template>
+     <pattern>WAT WIL IK KIJKEN</pattern>
+     <template>Je wilt een <get name="medium"/> kijken</template>
+ </category>
+  
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>HEB IK HET GOED BEGREPEN DAT JE EEN SERIE WILT KIJKEN</that>
+    <template>Wat voor soort <get name = "medium"/> wil je kijken? </template>
   </category>
   
   <category>
-    <pattern>yes</pattern>
-     <that>Do you want to watch a movie instead</that>
-    <template> What kind of movie do you want to watch?</template>
+    <pattern><set>NEE</set></pattern>
+     <that>HEB IK HET GOED BEGREPEN DAT JE EEN SERIE WILT KIJKEN</that>
+    <template>Wil je liever een film kijken?</template>
   </category>
   
     <category>
-    <pattern>comedy</pattern>
-     <that>What kind of tv show do you want to watch</that>
-    <template>Comedy, nice choice! With who do you want to watch?</template>
+    <pattern><set>JA</set></pattern>
+     <that>WIL JE LIEVER EEN FILM KIJKEN</that>
+    <template>Wat voor soort <set name="medium">film</set> wil je kijken? </template>
   </category>
   
   <category>
-     <pattern>action</pattern>
-     <that>What kind of tv show do you want to watch</that>
-     <template>Action, nice choice! With whom do you want to watch?</template>
+    <pattern><set>NEE</set></pattern>
+     <that>WIL JE LIEVER EEN FILM KIJKEN</that>
+    <template>Sorry, dan kan ik je niet helpen. </template>
+  </category>
+
+ <!-- GENRE - -->
+ <category>
+      <pattern> * <set>genres</set></pattern>
+      <template>
+      <that>WAT VOOR SOORT SERIE WIL JE KIJKEN</that>
+      <think><set name="genre"><input /></set></think>
+        <condition name="genre" value="actie">
+          Dus je wilt een <set name ="genre">actie</set> <get name = "medium"/> kijken?
+        </condition>
+        <condition name="genre" value="drama">
+            Dus je wilt een <set name ="genre">drama</set> <get name = "medium"/> kijken?
+        </condition>
+        <condition name="genre" value="komedie">
+            Dus je wilt een <set name ="genre">komedie</set> <get name = "medium"/> kijken?
+        </condition>
+      </template>
   </category>
   
   <category>
-     <pattern>drama</pattern>
-     <that>What kind of tv show do you want to watch</that>
-     <template>Drama, nice choice! With whom do you want to watch?</template>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS JE WILT EEN _ SERIE KIJKEN</that>
+    <template> Wat voor soort <set name="medium">film</set> wil je kijken? </template>
+  </category>
+ 
+  
+ <!-- GEZELSCHAP-->
+ 
+ <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS JE WILT EEN _ SERIE KIJKEN</that>
+    <template> Wil je deze <get name = "genre"/> <get name = "medium"/> alleen kijken?</template>
+  </category>
+ 
+
+<!-- GEZELSCHAP - alleen -->
+
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>KIJK JE DEZE _ SERIE ALLEEN</that>
+    <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <get name = "medium"/> alleen wilt kijken?</template>
+  </category>
+  
+  
+ <!-- GEZELSCHAP - samen --> 
+ 
+   <category>
+    <pattern><set>NEE</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE ALLEEN WILT KIJKEN</that>
+    <template>Met wie ga je deze serie samen kijken?</template>
+  </category>
+  
+ <category>
+    <pattern><set>NEE</set></pattern>
+     <that>WIL JE DEZE _ SERIE ALLEEN KIJKEN</that>
+    <template>Met wie ga je deze serie samen kijken?</template>
   </category>
   
    <category>
-    <pattern>my sister</pattern>
-     <that>With whom do you want to watch</that>
-    <template>Is any of the watchers of the tv show under age?</template>
-  </category>
-  
-   <category>
-    <pattern>yes</pattern>
-     <that>Is any of the watchers of the tv show under age</that>
-    <template>Sorry, none of the recommendations are suitable for this age group</template>
+      <pattern> * <set>partner</set></pattern>
+      <think><set name="partners"><input /></set></think>
+      <that>MET WIE GA JE DEZE SERIE SAMEN KIJKEN</that>
+      <template>Ik begrijp het dus goed dat je deze <get name = "genre"/> serie met jouw <get name = "partners"/> wilt kijken?</template>
   </category>
   
   <category>
-    <pattern>no</pattern>
-     <that>Is any of the watchers of the tv show under age</that>
-    <template>Sorry, none of the recommendations are suitable for this age group</template>
+    <pattern><set>NEE</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE MET JOUW _ WILT KIJKEN</that>
+    <template>Met wie ga je samen kijken?</template>
   </category>
   
   
+  <!--MINDERJARIG samen-->
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE MET JOUW _ WILT KIJKEN</that>
+    <template>Is minstens één van de <set name = "medium">serie</set> kijkers jonger dan 16 jaar?</template>
+  </category>
+  
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>IS MINSTENS ÉÉN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp zijn er minderjarige <set name = "medium">serie</set> kijkers?</template>
+  </category>
+  
+   <category>
+    <pattern><set>NEE</set></pattern>
+     <that>IS MINSTENS ÉÉN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp zijn er geen minderjarige <set name = "medium">serie</set> kijkers?</template>
+  </category>
+  
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE SERIE KIJKERS</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen is: Arrow.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titels <set name ="genre">drama</set> series, geschikt voor minderjarigen zijn: Stranger Things, Sherlock.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titels <set name ="genre">komedie</set> series, geschikt voor minderjarigen zijn: How I met your mother, Modern Family.
+          </condition></template>
+  </category>
+  
+  <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE SERIE KIJKERS</that>
+     <template><condition name="genre" value="actie">
+              De beste titels voor <set name ="genre">actie</set> series zijn: Arrow, The Punisher.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titels <set name ="genre">drama</set> series zijn: Stranger Things, Sherlock.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titels <set name ="genre">komedie</set> series zijn: How I met your mother, Modern Family.
+          </condition></template>
+  </category>
+  
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE SERIE KIJKERS</that>
+    <template><condition name="genre" value="actie">
+              De beste titels voor <set name ="genre">actie</set> series zijn: Arrow, The Punisher.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titels <set name ="genre">drama</set> series zijn: Stranger Things, Sherlock.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titels <set name ="genre">komedie</set> series zijn: How I met your mother, Modern Family.
+          </condition></template>
+  </category>
+  
+  <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE SERIE KIJKERS</that>
+     <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen is: Arrow.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titels <set name ="genre">drama</set> series, geschikt voor minderjarigen zijn: Stranger Things, Sherlock.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titels <set name ="genre">komedie</set> series, geschikt voor minderjarigen zijn: How I met your mother, Modern Family.
+          </condition></template>
+  </category>
+  
+  
+  <!-- alleen -->
+  
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE ALLEEN WILT KIJKEN</that>
+    <template>Ben jij een serie kijker jonger dan 16 jaar?</template>
+  </category> 
+  
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>BEN JIJ EEN SERIE KIJKER JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp ben je een minderjarige serie kijker?</template>
+  </category> 
+  
+   <category>
+    <pattern><set>NEE</set></pattern>
+     <that>BEN JIJ EEN SERIE KIJKER JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp ben je geen minderjarig serie kijker?</template>
+  </category> 
+  
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE SERIE KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindspot.
+          </condition>
+          <condition name="genre" value="drama">
+               De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash.
+              </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty.
+          </condition></template>
+    </category>
+    
+     <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE SERIE KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindspot.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty.
+          </condition></template>
+    </category>
+    
+    <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE SERIE KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindspot.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty.
+          </condition></template>
+    </category>
+    
+    <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE SERIE KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> serie  voor jou is: Star Wars: Blindpsot.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash. 
+              </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty.
+          </condition></template>
+    </category>
+  
+  
+
 </aiml>

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern> <set>recommendation</set> a recommendation </pattern>
-    <template> Hi! I'm Flixie and I can help you! Are you looking for a movie or a tv shows?</template>
+    <pattern> <set>recommendation</set> </pattern>
+    <template> Hallo ik ben Flixie! Ik kan je een aanbeveling geven. Ben je op zoek naar een film of een serie?</template>
   </category>
 
- <category>
-    <pattern>*</pattern>
-    <template>Sorry can you rephrase that?</template>
-  </category>
 </aiml>

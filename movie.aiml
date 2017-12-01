@@ -1,56 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+ 
+  <!-- MEDIUM -->
+ <category>
+      <pattern><set>recommendation</set> FILM</pattern>
+      <template> <think><set name="medium">film</set></think>
+      Heb ik het goed begrepen dat je een <set name="medium">film</set> wilt kijken?
+      </template>
+  </category>
+  
+ <category>
+     <pattern>WAT WIL IK KIJKEN</pattern>
+     <template>Je wilt een <get name="medium"/></template>
+ </category>
+  
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>HEB IK HET GOED BEGREPEN DAT JE EEN FILM WILT KIJKEN</that>
+    <template>Wat voor soort <get name = "medium"/> wil je kijken?</template>
+  </category>
+  
+  <category>
+    <pattern><set>NEE</set></pattern>
+     <that>HEB IK HET GOED BEGREPEN DAT JE EEN FILM WILT KIJKEN</that>
+    <template>Wil je liever een <set name="medium">serie</set> zien?</template>
+  </category>
+  
+    <category>
+    <pattern><set>JA</set></pattern>
+     <that>WIL JE LIEVER EEN SERIE KIJKEN</that>
+    <template>Wat voor soort <set name="medium">serie</set> wil je kijken? </template>
+  </category>
+  
+  <category>
+    <pattern><set>NEE</set></pattern>
+     <that>WIL JE LIEVER EEN SERIE KIJKEN</that>
+    <template>Sorry, dan kan ik je niet helpen. </template>
+  </category>
+ 
+  <!-- GENRE -->
+   <category>
+      <pattern><set>genres</set></pattern>
+      <template>
+      <that>WAT VOOR SOORT FILM WIL JE KIJKEN</that>
+      <think><set name="genre"><input/></set></think>
+        <condition name="genre" value="actie">
+           Dus je wilt een <set name ="genre">actie</set> <get name = "medium"/> kijken?
+        </condition>
+        <condition name="genre" value="drama">
+            Dus je wilt een <set name ="genre">drama</set> <get name = "medium"/> kijken?
+        </condition>
+        <condition name="genre" value="komedie">
+            Dus je wilt een <set name ="genre">komedie</set> <get name = "medium"/> kijken?
+        </condition>
+      </template>
+  </category>
+  
+    <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS JE WILT EEN _ FILM KIJKEN</that>
+    <template> Wat voor soort <set name="medium">film</set> wil je kijken? </template>
+  </category>
 
+  
+  <!-- GEZELSCHAP -->
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS JE WILT EEN _ FILM KIJKEN</that>
+    <template> Kijk je deze <get name = "genre"/> <get name = "medium"/> alleen?</template>
+  </category>
+  
+  
+  <!-- GEZELSCHAP - alleen -->
+
+<category>
+    <pattern><set>JA</set></pattern>
+     <that>KIJK JE DEZE _ FILM ALLEEN</that>
+    <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <get name = "medium"/> alleen wilt kijken?</template>
+  </category>
+  
+  
+ <!-- GEZELSCHAP - samen --> 
+ 
+    <category>
+    <pattern><set>NEE</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM ALLEEN WILT KIJKEN</that>
+    <template> Met wie wil je deze <get name="genre"/> <get name = "medium"/> kijken?</template>
+  </category>
+ 
+ 
  <category>
-    <pattern> <set>recommendation</set> movie</pattern>
-    <template>
-     Did I understand it correctly that you are looking for a movie?
-    </template>
+    <pattern><set>NEE</set></pattern>
+     <that>KIJK JE DEZE _ FILM ALLEEN</that>
+    <template> Met wie ga je deze <set name = "medium">film</set>samen kijken?</template>
+  </category>
+ 
+  <category>
+      <pattern> * <set>partner</set></pattern>
+      <think><set name="partners"><input /></set></think>
+      <that>MET WIE GA JE DEZE FILM SAMEN KIJKEN</that>
+      <template>Ik begrijp het dus goed dat je deze <get name = "genre"/> film met jouw <get name = "partners"/> wilt kijken?</template>
   </category>
   
   <category>
-    <pattern>*</pattern>
-    <template>
-        <condition name="medium" value="tv show">
-            What type of tv show are you looking for?
-        </condition>
-        <condition name="medium" value="movie">
-            What type of movie are you looking for?
-        </condition>
-    </template>
-</category>
-  
- <category>
-     <pattern>MOVIE</pattern>
-     <template>Okay, <set name="medium">movie</set> it is!</template>
- </category>
- 
- <category>
-     <pattern>TV SHOW</pattern>
-     <template>Okay, <set name="medium">tv show</set> it is!</template>
- </category>
- 
- <category>
-     <pattern>WHAT DO I WANT</pattern>
-     <template>You want to see a <get name="medium"/></template>
- </category>
-  
-  <category>
-    <pattern>yes</pattern>
-     <that>Did I understand it correctly that you are looking for a movie</that>
-    <template>What kind of movie do you want to watch?</template>
+    <pattern><set>NEE</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM MET JOUW _ WILT KIJKEN</that>
+    <template>Met wie ga je samen kijken?</template>
   </category>
   
- <category>
-    <pattern>no</pattern>
-     <that>Did I understand it correctly that you are looking for a movie</that>
-    <template>Do you want to watch a tv show instead? </template>
+  <!--samen--> 
+  
+     <category>
+    <pattern><set>JA</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM MET JOUW _ WILT KIJKEN</that>
+    <template>Is minstens één van de film kijkers jonger dan 16 jaar?</template>
+  </category>
+  
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>IS MINSTENS ÉÉN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp zijn er minderjarige film kijkers?</template>
   </category>
   
    <category>
-    <pattern>yes</pattern>
-     <that>Do you want to watch a tv show instead</that>
-    <template>What kind of tv show do you want to watch?</template>
+    <pattern><set>NEE</set></pattern>
+     <that>IS MINSTENS ÉÉN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp zijn er geen minderjarige film kijkers?</template>
   </category>
   
+  <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE FILM KIJKERS</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> film voor jullie is: Doctor Strange.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> film voor jullie is: Forrest Gump.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> film voor jullie is: She's the man.
+          </condition></template>
+  </category>
+  
+  <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE FILM KIJKERS</that>
+     <template><condition name="genre" value="actie">
+              De beste titels voor <set name ="genre">actie</set> films voor jullie zijn: Doctor Strange, Saving Private Ryan.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titels <set name ="genre">drama</set> films voor jullie zijn: Forrest Gump, Intouchables.
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titels <set name ="genre">komedie</set> films voor jullie zijn: She's the Man, Men in Black 1,2,3.
+          </condition></template>
+  </category>
+  
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE FILM KIJKERS</that>
+    <template><condition name="genre" value="actie">
+              De beste titels voor <set name ="genre">actie</set> films voor jullie zijn: Doctor Strange, Saving Private Ryan.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titels <set name ="genre">drama</set> films voor jullie zijn: Forrest Gump, Intouchables.
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titels <set name ="genre">komedie</set> films voor jullie zijn: She's the Man, Men in Black 1,2,3.
+          </condition></template>
+  </category>
+  
+  <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE FILM KIJKERS</that>
+     <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> film voor jullie is: Doctor Strange.
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> film voor jullie is: Forrest Gump.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> film voor jullie is: She's the man.
+          </condition></template>
+  </category>
+  
+  
+  <!-- alleen--> 
+ 
+ <category>
+    <pattern><set>JA</set></pattern>
+     <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM ALLEEN WILT KIJKEN</that>
+    <template>Ben jij een film kijker jonger dan 16 jaar?</template>
+  </category> 
+  
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>BEN JIJ EEN FILM KIJKER JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp ben je een minderjarige film kijker?</template>
+  </category> 
+  
+   <category>
+    <pattern><set>NEE</set></pattern>
+     <that>BEN JIJ EEN FILM KIJKER JONGER DAN 16 JAAR</that>
+    <template>Dus als ik het goed begrijp ben je geen minderjarig film kijker?</template>
+  </category> 
+  
+   <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE FILM KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. 
+          </condition>
+          <condition name="genre" value="drama">
+              Sorry, ik heb helaas geen <set name ="genre">drama</set> film aanbeveling voor jou, die geschikt is.
+              </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. 
+          </condition></template>
+    </category>
+    
+     <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE FILM KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. 
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> film  voor jou is: 12 Years a Slave. 
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. 
+          </condition></template>
+    </category>
+    
+    <category>
+    <pattern><set>JA</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE FILM KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. 
+          </condition>
+          <condition name="genre" value="drama">
+              De beste titel voor een <set name ="genre">drama</set> film  voor jou is: 12 Years a Slave.  
+          </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. 
+          </condition></template>
+    </category>
+    
+    <category>
+    <pattern><set>NEE</set></pattern>
+     <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE FILM KIJKER</that>
+    <template><condition name="genre" value="actie">
+              De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One.
+          </condition>
+          <condition name="genre" value="drama">
+              Sorry, ik heb helaas geen <set name ="genre">drama</set> film aanbeveling voor jou, die geschikt is.
+              </condition>
+          <condition name="genre" value="comedy">
+              De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. 
+          </condition></template>
+    </category>
+  
+     
+         
 </aiml>
