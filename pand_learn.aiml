@@ -8,15 +8,15 @@
 
 
         
-<category><pattern>ACTION</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
+<category> ^<pattern>ACTION</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
 
 
         
-<category><pattern>COMEDY</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
+<category> ^<pattern>COMEDY</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
 
 
         
-<category><pattern>COMEDIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
+<category> ^<pattern>COMEDIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
 
 
 </aiml>
