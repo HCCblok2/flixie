@@ -6,17 +6,13 @@
         
 <category><pattern>FILM</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">film</set> wilt kijken?</template></category>
 
-
         
 <category> ^<pattern>ACTION</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
 
-
-        
 <category> ^<pattern>COMEDY</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
 
-
-        
 <category> ^<pattern>COMEDIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
 
+ 
 
 </aiml>

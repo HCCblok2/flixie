@@ -63,7 +63,7 @@
  <category>
     <pattern><set>JA</set></pattern>
      <that>DUS JE WILT EEN _ SERIE KIJKEN</that>
-    <template> Wil je deze <get name = "genre"/> <get name = "medium"/> alleen kijken?</template>
+    <template> Kijk je deze <get name = "genre"/> <get name = "medium"/> alleen?</template>
   </category>
  
 
@@ -71,7 +71,7 @@
 
    <category>
     <pattern><set>JA</set></pattern>
-     <that>WIL JE DEZE _ SERIE ALLEEN KIJKEN</that>
+     <that> KIJK JE DEZE _ SERIE ALLEEN</that>
     <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <get name = "medium"/> alleen wilt kijken?</template>
   </category>
   
@@ -86,16 +86,16 @@
   
  <category>
     <pattern><set>NEE</set></pattern>
-     <that>WIL JE DEZE _ SERIE ALLEEN KIJKEN</that>
+     <that>KIJK JE DEZE _ SERIE ALLEEN</that>
     <template>Met wie ga je deze serie samen kijken?</template>
   </category>
   
    <category>
-      <pattern> * <set>partner</set></pattern>
+      <pattern> ^ <set>partner</set></pattern>
       <that>MET WIE GA JE DEZE SERIE SAMEN KIJKEN</that>
       <template>
       <think><set name="partners"><input /></set></think>
-      Ik begrijp het dus goed dat je deze <get name = "genre"/> serie met jouw <get name = "partners"/> wilt kijken?</template>
+      Ik begrijp het dus goed dat je deze <get name = "genre"/> serie met jouw '<get name = "partners"/>' wilt kijken?</template>
   </category>
   
   <category>
@@ -128,13 +128,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE SERIE KIJKERS</that>
     <template><condition name="genre" value="actie">
-              De beste titel voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen is: Arrow. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen zijn: Arrow. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titels <set name ="genre">drama</set> series, geschikt voor minderjarigen zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">drama</set> serie, geschikt voor minderjarigen zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-              De beste titels <set name ="genre">komedie</set> series, geschikt voor minderjarigen zijn: How I met your mother, Modern Family. Welke serie heeft jouw voorkeur?
+             De beste opties voor een <set name ="genre">komedie</set> serie, geschikt voor minderjarigen zijn: How I met your mother, Modern Family. Welke serie heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -142,13 +142,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE SERIE KIJKERS</that>
      <template><condition name="genre" value="actie">
-              De beste titels voor <set name ="genre">actie</set> series zijn: Arrow, The Punisher. Welke serie heeft jouw voorkeur?
+             De beste opties voor een <set name ="genre">actie</set> serie zijn: Arrow, The Punisher. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titels <set name ="genre">drama</set> series zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">drama</set> serie zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-              De beste titels <set name ="genre">komedie</set> series zijn: How I met your Mother, Modern Family. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">komedie</set> serie zijn: How I met your Mother, Modern Family. Welke serie heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -156,13 +156,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE SERIE KIJKERS</that>
     <template><condition name="genre" value="actie">
-              De beste titels voor <set name ="genre">actie</set> series zijn: Arrow, The Punisher. Welke serie heeft jouw voorkeur?
+             De beste opties voor een <set name ="genre">actie</set> serie zijn: Arrow, The Punisher. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titels <set name ="genre">drama</set> series zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
+             De beste opties voor een <set name ="genre">drama</set> serie zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-              De beste titels <set name ="genre">komedie</set> series zijn: How I met your Mother, Modern Family. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">komedie</set> serie zijn: How I met your Mother, Modern Family. Welke serie heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -170,14 +170,14 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE SERIE KIJKERS</that>
      <template><condition name="genre" value="actie">
-              De beste titel voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen is: Arrow. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen zijn: Arrow. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titels <set name ="genre">drama</set> series, geschikt voor minderjarigen zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">drama</set> serie, geschikt voor minderjarigen zijn: Stranger Things, Sherlock. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-              De beste titels <set name ="genre">komedie</set> series, geschikt voor minderjarigen zijn: How I met your mother, Modern Family. Welke serie heeft jouw voorkeur?
-          </condition></template>
+              De beste opties voor een <set name ="genre">komedie</set> serie, geschikt voor minderjarigen zijn: How I met your mother, Modern Family. Welke serie heeft jouw voorkeur?
+              </condition></template>
   </category>
   
   
@@ -205,13 +205,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
-              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindspot. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">actie</set> serie zijn: Blindspot. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-               De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">drama</set> serie zijn: The Flash. Welke serie heeft jouw voorkeur?
               </condition>
           <condition name="genre" value="komedie">
-              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">komedie</set> serie zijn: Rick and Morty. Welke serie heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -219,13 +219,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
-              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindspot. Welke serie heeft jouw voorkeur?
+              De beste opties voor een<set name ="genre">actie</set> serie zijn: Blindspot. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash. Welke serie heeft jouw voorkeur?
+             De beste opties voor een <set name ="genre">drama</set> serie zijn: The Flash.Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty. Welke serie heeft jouw voorkeur?
+              DDe beste opties voor een <set name ="genre">komedie</set> serie zijn: Rick and Morty. Welke serie heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -233,13 +233,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
-              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindspot. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">actie</set> serie zijn: Blindspot. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">drama</set> serie zijn: The Flash. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">komedie</set> serie zijn: Rick and Morty. Welke serie heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -247,13 +247,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
-              De beste titel voor een <set name ="genre">actie</set> serie voor jou is: Blindpsot. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">actie</set> serie zijn: Blindpsot. Welke serie heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-              De beste titel voor een <set name ="genre">drama</set> serie voor jou is: The Flash. Welke serie heeft jouw voorkeur?
+              De beste opties voor een <set name ="genre">drama</set> serie zijn: The Flash. Welke serie heeft jouw voorkeur?
               </condition>
           <condition name="genre" value="komedie">
-              De beste titel voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty. Welke serie heeft jouw voorkeur?
+             De beste opties voor een <set name ="genre">komedie</set> serie voor jou: Rick and Morty. Welke serie heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -273,7 +273,6 @@
     <template><think><set name="keuze"><input/></set></think>
     Heb ik het goed begrepen dat je de serie <get name = "keuze"/> wilt kijken?</template>
   </category> 
- 
   
   <category>
     <pattern> ^<set>tvshowsaction</set></pattern>
@@ -282,7 +281,6 @@
      <think><set name="keuze"><input/></set></think>
      Heb ik het goed begrepen dat je de serie <get name = "keuze"/> wilt kijken?</template>
   </category> 
- 
   
   <category>
     <pattern><set>JA</set></pattern>
@@ -295,8 +293,7 @@
     <pattern><set>NEE</set></pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE DE SERIE _ WILT KIJKEN</that>
     <template>
-        Welke serie heeft jouw voorkeur?</template>
+        Welke serie wil je graag zien?</template>
   </category> 
- 
 
 </aiml>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern> <set>recommendation</set> </pattern>
-    <template> Hallo ik ben Flixie! Ik kan je een aanbeveling geven. Ben je op zoek naar een film of een serie?</template>
+    <pattern><set>recommendation</set></pattern>
+    <template>Hoi, ik ben Flixie! Ik help je met het vinden van een serie of een film. 
+    Welke wil je graag kijken?</template>
   </category>
   
    <category>
@@ -22,6 +23,14 @@
     <template> Maak een keuze tussen 'serie' of 'film'. </template>
   </category>
   
+   <category>
+    <pattern>*</pattern>
+     <that>WELKE _ HEEFT JOUW VOORKEUR</that>
+    <template> 
+    Sorry, kan je dat herformuleren. Welke <get name = "medium"/> wil je graag zien? </template>
+  </category>
+  
+  
   <category>
     <pattern>*</pattern>
      <that>WAT VOOR SOORT _ WIL JE KIJKEN</that>
@@ -34,11 +43,11 @@
     <template> Sorry, dat begreep ik niet. Wat voor soort <get name="medium"/> wil je kijken? </template>
   </category>
  
-   <category>
-    <pattern>*</pattern>
-     <that>WELKE _ HEEFT JOUW VOORKEUR</that>
-    <template> Dat heb ik niet begrepen. Kan je dat herformuleren? Welke <get name = "medium"/> heeft jouw voorkeur?</template>
-  </category> 
+  <category>
+      <pattern>*</pattern>
+      <that>MET WIE GA JE DEZE _ SAMEN KIJKEN</that>
+      <template>Sorry, kun je dat herformuleren. Met wie ga je deze <get name = "medium"/> samen kijken?</template>
+  </category>
   
    <category>
     <pattern>*</pattern>
@@ -46,12 +55,26 @@
     <template>
         Sorry, kan je dat herformuleren? Welk deel van de triologie wil je kijken? </template>
   </category>
-  
+
    <category>
     <pattern>*</pattern>
     <template>Sorry, ik ben het kwijt! Ben je op zoek naar een film of een serie?</template>
   </category>
   
+  <category>
+    <pattern>JA</pattern>
+     <that>BEN JE OP ZOEK NAAR EEN FILM OF EEN SERIE</that>
+    <template> Ik help je met het vinden van een serie of een film. Welke wil je graag kijken?
+       </template>
+  </category>
   
+   <category>
+    <pattern>NEE</pattern>
+     <that>BEN JE OP ZOEK NAAR EEN FILM OF EEN SERIE</that>
+    <template> Sorry, dan kan ik je niet helpen.
+       </template>
+  </category>
 
+
+  
 </aiml>

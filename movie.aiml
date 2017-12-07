@@ -67,7 +67,7 @@
    <category>
     <pattern><set>JA</set></pattern>
      <that>DUS JE WILT EEN _ FILM KIJKEN</that>
-    <template> Wil je deze <get name = "genre"/> <get name = "medium"/> alleen kijken?</template>
+    <template> Kijk je deze <get name = "genre"/> <get name = "medium"/> alleen?</template>
   </category>
   
   
@@ -75,7 +75,7 @@
 
 <category>
     <pattern><set>JA</set></pattern>
-     <that>WIL JE DEZE _ FILM ALLEEN KIJKEN</that>
+     <that>KIJK JE DEZE _ FILM ALLEEN </that>
     <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <get name = "medium"/> alleen wilt kijken?</template>
   </category>
   
@@ -92,7 +92,7 @@
  
  <category>
     <pattern><set>NEE</set></pattern>
-     <that>WIL JE DEZE _ FILM ALLEEN KIJKEN</that>
+     <that>KIJK JE DEZE _ FILM ALLEEN</that>
     <template> Met wie ga je deze <set name = "medium">film</set> samen kijken?</template>
   </category>
  
@@ -100,7 +100,7 @@
       <pattern> ^<set>partner</set></pattern>
       <that>MET WIE GA JE DEZE FILM SAMEN KIJKEN</that>
       <template> <think><set name="partners"><input /></set></think>
-      Ik begrijp het dus goed dat je deze <get name = "genre"/> film met jouw <get name = "partners"/> wilt kijken?</template>
+      Ik begrijp het dus goed dat je deze <get name = "genre"/> film met jouw '<get name = "partners"/>'' wilt kijken?</template>
   </category>
   
   <category>
@@ -114,18 +114,18 @@
      <category>
     <pattern><set>JA</set></pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM MET JOUW _ WILT KIJKEN</that>
-    <template>Is minstens één van de film kijkers jonger dan 16 jaar?</template>
+    <template>Is een van de film kijkers jonger dan 16 jaar?</template>
   </category>
   
   <category>
     <pattern><set>JA</set></pattern>
-     <that>IS MINSTENS ÉÉN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
+     <that>IS EEN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er minderjarige film kijkers?</template>
   </category>
   
    <category>
     <pattern><set>NEE</set></pattern>
-     <that>IS MINSTENS ÉÉN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
+     <that>IS EEN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er geen film kijkers minderjarig?</template>
   </category>
   
@@ -133,13 +133,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE FILM KIJKERS</that>
      <template><condition name="genre" value="actie">
-         De beste titel voor een <set name ="genre">actie</set> film voor jullie is: Doctor Strange. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         De beste titel voor een <set name ="genre">drama</set> film voor jullie is: Forrest Gump. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">drama</set> film zijn: Forrest Gump. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-         De beste titel voor een <set name ="genre">komedie</set> film voor jullie is: She's the man. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film zijn: She's the man. Welke film heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -147,13 +147,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE FILM KIJKERS</that>
      <template><condition name="genre" value="actie">
-         De beste titels voor <set name ="genre">actie</set> films voor jullie zijn: Doctor Strange, Saving Private Ryan. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange, Saving Private Ryan. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         De beste titels <set name ="genre">drama</set> films voor jullie zijn: Forrest Gump, Intouchables. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">drama</set> film zijn: Forrest Gump, Intouchables. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-         De beste titels <set name ="genre">komedie</set> films voor jullie zijn: She's the Man, The Big Short. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film zijn: She's the Man, The Big Short. Welke film heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -161,13 +161,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN FILM KIJKERS MINDERJARIG</that>
     <template><condition name="genre" value="actie">
-         De beste titels voor <set name ="genre">actie</set> films voor jullie zijn: Doctor Strange, Saving Private Ryan. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange, Saving Private Ryan. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         De beste titels <set name ="genre">drama</set> films voor jullie zijn: Forrest Gump, Intouchables. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">drama</set> film zijn: Forrest Gump, Intouchables. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-         De beste titels <set name ="genre">komedie</set> films voor jullie zijn: She's the Man,  The Big Short. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film zijn: She's the Man,  The Big Short. Welke film heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -175,13 +175,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN FILM KIJKERS MINDERJARIG</that>
      <template><condition name="genre" value="actie">
-         De beste titel voor een <set name ="genre">actie</set> film voor jullie is: Doctor Strange. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         De beste titel voor een <set name ="genre">drama</set> film voor jullie is: Forrest Gump. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">drama</set> film zijn: Forrest Gump. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-         De beste titel voor een <set name ="genre">komedie</set> film voor jullie is: She's the man. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film zijn: She's the man. Welke film heeft jouw voorkeur?
           </condition></template>
   </category>
   
@@ -191,18 +191,18 @@
  <category>
     <pattern><set>JA</set></pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM ALLEEN WILT KIJKEN</that>
-    <template>Ben jij een film kijker jonger dan 16 jaar?</template>
+    <template>Ben je zelf een film kijker jonger dan 16 jaar?</template>
   </category> 
   
    <category>
     <pattern><set>JA</set></pattern>
-     <that>BEN JIJ EEN FILM KIJKER JONGER DAN 16 JAAR</that>
+     <that>BEN JE ZELF EEN FILM KIJKER JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp ben je een minderjarige film kijker?</template>
   </category> 
   
    <category>
     <pattern><set>NEE</set></pattern>
-     <that>BEN JIJ EEN FILM KIJKER JONGER DAN 16 JAAR</that>
+     <that>BEN JE ZELF EEN FILM KIJKER JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp ben je geen minderjarige film kijker?</template>
   </category> 
   
@@ -210,13 +210,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
-         De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film, geschikt voor minderjarigen, zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
          Sorry, ik heb helaas geen <set name ="genre">drama</set> film aanbeveling voor jou, die geschikt is.
             </condition>
           <condition name="genre" value="komedie">
-         De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film, geschikt voor minderjarigen, zijn: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -224,13 +224,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
-         De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         De beste titel voor een <set name ="genre">drama</set> film  voor jou is: 12 Years a Slave. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">drama</set> film zijn: 12 Years a Slave. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-         De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film zijn: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -238,13 +238,13 @@
     <pattern><set>JA</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
-         De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         De beste titel voor een <set name ="genre">drama</set> film  voor jou is: 12 Years a Slave. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">drama</set> film zijn: 12 Years a Slave. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="komedie">
-         De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film zijn: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
           </condition></template>
     </category>
     
@@ -252,13 +252,13 @@
     <pattern><set>NEE</set></pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
-         De beste titel voor een <set name ="genre">actie</set> film  voor jou is: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">actie</set> film, geschikt voor minderjarigen, zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
           </condition>
           <condition name="genre" value="drama">
-         Sorry, ik heb helaas geen <set name ="genre">drama</set> film aanbeveling voor jou, die geschikt is. Welke film heeft jouw voorkeur?
+         Sorry, ik heb helaas geen <set name ="genre">drama</set> film aanbeveling voor jou, die geschikt is.
           </condition>
           <condition name="genre" value="komedie">
-         De beste titel voor een <set name ="genre">komedie</set> film voor jou: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
+         De beste opties voor een <set name ="genre">komedie</set> film, geschikt voor minderjarigen, zijn: Men in Black 1,2,3. Welke film heeft jouw voorkeur?
           </condition></template>
     </category>
   
@@ -305,7 +305,7 @@
     <pattern><set>NEE</set></pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE DE FILM _ WILT KIJKEN</that>
     <template>
-        Welke film heeft jouw voorkeur?</template>
+        Welke film wil je graag zien?</template>
   </category> 
   
   <!-- triologie -->
@@ -338,6 +338,5 @@
     <template>
        Welk deel van de triologie wil je kijken?</template>
   </category> 
-  
  
 </aiml>
