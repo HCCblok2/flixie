@@ -67,7 +67,7 @@
    <category>
     <pattern><set>JA</set></pattern>
      <that>DUS JE WILT EEN _ FILM KIJKEN</that>
-    <template> Kijk je deze <get name = "genre"/> <get name = "medium"/> alleen?</template>
+    <template> Kijk je deze <get name = "genre"/> <set name = "medium">film</set> alleen?</template>
   </category>
   
   
@@ -76,7 +76,7 @@
 <category>
     <pattern><set>JA</set></pattern>
      <that>KIJK JE DEZE _ FILM ALLEEN </that>
-    <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <get name = "medium"/> alleen wilt kijken?</template>
+    <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <set name = "medium">film</set> alleen wilt kijken?</template>
   </category>
   
   
@@ -114,7 +114,7 @@
      <category>
     <pattern><set>JA</set></pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM MET JOUW _ WILT KIJKEN</that>
-    <template>Is een van de film kijkers jonger dan 16 jaar?</template>
+    <template>Is een van de <set name = "medium">film</set> kijkers jonger dan 16 jaar?</template>
   </category>
   
   <category>

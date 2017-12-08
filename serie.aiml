@@ -63,7 +63,7 @@
  <category>
     <pattern><set>JA</set></pattern>
      <that>DUS JE WILT EEN _ SERIE KIJKEN</that>
-    <template> Kijk je deze <get name = "genre"/> <get name = "medium"/> alleen?</template>
+    <template> Kijk je deze <get name = "genre"/> <set name = "medium">serie</set> alleen?</template>
   </category>
  
 
@@ -72,7 +72,7 @@
    <category>
     <pattern><set>JA</set></pattern>
      <that> KIJK JE DEZE _ SERIE ALLEEN</that>
-    <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <get name = "medium"/> alleen wilt kijken?</template>
+    <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <set name = "medium">serie</set> alleen wilt kijken?</template>
   </category>
   
   
@@ -109,18 +109,18 @@
   <category>
     <pattern><set>JA</set></pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE MET JOUW _ WILT KIJKEN</that>
-    <template>Is minstens één van de <set name = "medium">serie</set> kijkers jonger dan 16 jaar?</template>
+    <template>Is een van de <set name = "medium">serie</set> kijkers jonger dan 16 jaar?</template>
   </category>
   
   <category>
     <pattern><set>JA</set></pattern>
-     <that>IS MINSTENS ÉÉN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
+     <that>IS EEN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er minderjarige <set name = "medium">serie</set> kijkers?</template>
   </category>
   
    <category>
     <pattern><set>NEE</set></pattern>
-     <that>IS MINSTENS ÉÉN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
+     <that>IS EEN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er geen minderjarige <set name = "medium">serie</set> kijkers?</template>
   </category>
   
