@@ -62,14 +62,14 @@
   </category>
   
   <category>
-    <pattern>JA</pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>BEN JE OP ZOEK NAAR EEN FILM OF EEN SERIE</that>
     <template> Ik help je met het vinden van een serie of een film. Welke van de twee wil je graag kijken?
        </template>
   </category>
   
    <category>
-    <pattern>NEE</pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>BEN JE OP ZOEK NAAR EEN FILM OF EEN SERIE</that>
     <template> Sorry, dan kan ik je niet helpen.
        </template>
