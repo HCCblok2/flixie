@@ -15,25 +15,25 @@
  </category>
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE EEN FILM WILT KIJKEN</that>
     <template>Wat voor soort <get name = "medium"/> wil je kijken?</template>
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE EEN FILM WILT KIJKEN</that>
     <template>Wil je liever een <set name="medium">serie</set> zien?</template>
   </category>
   
     <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>WIL JE LIEVER EEN SERIE KIJKEN</that>
     <template>Wat voor soort <set name="medium">serie</set> wil je kijken? </template>
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>WIL JE LIEVER EEN SERIE KIJKEN</that>
     <template>Sorry, dan kan ik je niet helpen. </template>
   </category>
@@ -57,7 +57,7 @@
   </category>
   
     <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS JE WILT EEN _ FILM KIJKEN</that>
     <template> Wat voor soort <set name="medium">film</set> wil je kijken? </template>
   </category>
@@ -65,7 +65,7 @@
   
   <!-- GEZELSCHAP -->
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS JE WILT EEN _ FILM KIJKEN</that>
     <template> Kijk je deze <get name = "genre"/> <set name = "medium">film</set> alleen?</template>
   </category>
@@ -74,24 +74,22 @@
   <!-- GEZELSCHAP - alleen -->
 
 <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>KIJK JE DEZE _ FILM ALLEEN </that>
     <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <set name = "medium">film</set> alleen wilt kijken?</template>
   </category>
   
-  
-  
  <!-- GEZELSCHAP - samen --> 
  
     <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM ALLEEN WILT KIJKEN</that>
     <template> Met wie ga je deze <get name="genre"/> <get name = "medium"/> kijken?</template>
   </category>
  
  
  <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>KIJK JE DEZE _ FILM ALLEEN</that>
     <template> Met wie ga je deze <set name = "medium">film</set> samen kijken?</template>
   </category>
@@ -104,7 +102,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM MET JOUW _ WILT KIJKEN</that>
     <template>Met wie ga je samen kijken?</template>
   </category>
@@ -112,25 +110,25 @@
   <!--samen--> 
   
      <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM MET JOUW _ WILT KIJKEN</that>
     <template>Is een van de <set name = "medium">film</set> kijkers jonger dan 16 jaar?</template>
   </category>
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>IS EEN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er minderjarige film kijkers?</template>
   </category>
   
    <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>IS EEN VAN DE FILM KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er geen film kijkers minderjarig?</template>
   </category>
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE FILM KIJKERS</that>
      <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange. Welke film heeft jouw voorkeur?
@@ -144,7 +142,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE FILM KIJKERS</that>
      <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange, Saving Private Ryan. Welke film heeft jouw voorkeur?
@@ -158,7 +156,7 @@
   </category>
   
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN FILM KIJKERS MINDERJARIG</that>
     <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange, Saving Private Ryan. Welke film heeft jouw voorkeur?
@@ -172,7 +170,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN FILM KIJKERS MINDERJARIG</that>
      <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film zijn: Doctor Strange. Welke film heeft jouw voorkeur?
@@ -189,25 +187,25 @@
   <!-- alleen--> 
  
  <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ FILM ALLEEN WILT KIJKEN</that>
     <template>Ben je zelf een film kijker jonger dan 16 jaar?</template>
   </category> 
   
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>BEN JE ZELF EEN FILM KIJKER JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp ben je een minderjarige film kijker?</template>
   </category> 
   
    <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>BEN JE ZELF EEN FILM KIJKER JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp ben je geen minderjarige film kijker?</template>
   </category> 
   
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film, geschikt voor minderjarigen, zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
@@ -221,7 +219,7 @@
     </category>
     
      <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
@@ -235,7 +233,7 @@
     </category>
     
     <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
@@ -249,7 +247,7 @@
     </category>
     
     <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE FILM KIJKER</that>
     <template><condition name="genre" value="actie">
          De beste opties voor een <set name ="genre">actie</set> film, geschikt voor minderjarigen, zijn: Star Wars: Rogue One. Welke film heeft jouw voorkeur?
@@ -294,15 +292,23 @@
      Dus je wilt graag de film <get name = "keuze"/> kijken?</template>
   </category> 
   
+   <category>
+    <pattern> ^<set>triology</set></pattern>
+     <that>WELKE FILM HEEFT JOUW VOORKEUR</that>
+    <template>
+     <think><set name="keuze"><input/></set></think>
+     Heb ik het goed begrepen dat je de film <get name = "keuze"/> wilt kijken?</template>
+  </category> 
+  
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE DE FILM _ WILT KIJKEN</that>
     <template>
         <get name = "keuze"/>, goede keuze! Veel kijkplezier!</template>
   </category> 
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE DE FILM _ WILT KIJKEN</that>
     <template>
         Welke film wil je graag zien?</template>
@@ -310,22 +316,22 @@
   
   <!-- triologie -->
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS JE WILT GRAAG DE FILM _ KIJKEN</that>
     <template>
-        Welk deel van de triologie wil je kijken?</template>
+        Welk deel van de trilogie wil je kijken?</template>
   </category> 
   
   <category>
     <pattern>^<set>triology</set></pattern>
-     <that>WELK DEEL VAN DE TRIOLOGIE WIL JE KIJKEN</that>
+     <that>WELK DEEL VAN DE TRILOGIE WIL JE KIJKEN</that>
     <template>
         <think><set name="deel"><input/></set></think>
        Dus ik begrijp het goed dat je deel <get name = "deel"/> wilt kijken? </template>
   </category> 
   
     <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS IK BEGRIJP HET GOED DAT JE DEEL _ WILT KIJKEN</that>
     <template>
         <think><set name="deel"><input/></set></think>
@@ -333,7 +339,7 @@
   </category> 
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS IK BEGRIJP HET GOED DAT JE DEEL _ WILT KIJKEN</that>
     <template>
        Welk deel van de triologie wil je kijken?</template>

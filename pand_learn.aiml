@@ -1,8 +1,8 @@
 <aiml version="2.0">
 
-<category><pattern>SERIE</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">serie</set> wilt kijken?</template></category>
+<category><pattern>^ SERIE</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">serie</set> wilt kijken?</template></category>
 
-<category><pattern>FILM</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">film</set> wilt kijken?</template></category>
+<category><pattern>^ FILM</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">film</set> wilt kijken?</template></category>
 
 <!-- ACTIE -->         
 <category> <pattern>ACTION</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>

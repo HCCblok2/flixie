@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern><set>recommendation</set></pattern>
+    <pattern><set>recommendation</set>^</pattern>
     <template>Hoi, ik ben Flixie! Ik help je met het vinden van een serie of een film. 
-    Welke wil je graag kijken?</template>
+    Welke van de twee wil je graag kijken?</template>
   </category>
   
    <category>
@@ -20,14 +20,14 @@
   <category>
     <pattern>*</pattern>
      <that>WIL JE LIEVER EEN _ KIJKEN</that>
-    <template> Maak een keuze tussen 'serie' of 'film'. </template>
+    <template>Maak een keuze tussen 'serie' of 'film'. </template>
   </category>
   
    <category>
     <pattern>*</pattern>
      <that>WELKE _ HEEFT JOUW VOORKEUR</that>
     <template> 
-    Sorry, kan je dat herformuleren. Welke <get name = "medium"/> wil je graag zien? </template>
+    Sorry, kan je dat herformuleren. Welke <get name = "medium"/> heeft jouw voorkeur? </template>
   </category>
   
   
@@ -51,9 +51,9 @@
   
    <category>
     <pattern>*</pattern>
-     <that>WELK DEEL VAN DE TRIOLOGIE WIL JE KIJKEN</that>
+     <that>WELK DEEL VAN DE TRILOGIE WIL JE KIJKEN</that>
     <template>
-        Sorry, kan je dat herformuleren? Welk deel van de triologie wil je kijken? </template>
+        Sorry, kan je dat herformuleren? Welk deel van de trilogie wil je kijken? </template>
   </category>
 
    <category>
@@ -64,7 +64,7 @@
   <category>
     <pattern>JA</pattern>
      <that>BEN JE OP ZOEK NAAR EEN FILM OF EEN SERIE</that>
-    <template> Ik help je met het vinden van een serie of een film. Welke wil je graag kijken?
+    <template> Ik help je met het vinden van een serie of een film. Welke van de twee wil je graag kijken?
        </template>
   </category>
   
@@ -74,7 +74,12 @@
     <template> Sorry, dan kan ik je niet helpen.
        </template>
   </category>
-
+   <category>
+   
+    <pattern>*</pattern>
+     <that>VEEL KIJKPLEZIER</that>
+    <template>Bedankt dat ik je mocht helpen. Tot de volgende keer!</template>
+  </category>
 
   
 </aiml>

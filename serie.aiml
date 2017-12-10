@@ -10,25 +10,25 @@
   </category>
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE EEN SERIE WILT KIJKEN</that>
     <template>Wat voor soort <get name = "medium"/> wil je kijken? </template>
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE EEN SERIE WILT KIJKEN</that>
     <template>Wil je liever een film kijken?</template>
   </category>
   
     <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>WIL JE LIEVER EEN FILM KIJKEN</that>
     <template>Wat voor soort <set name="medium">film</set> wil je kijken? </template>
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>WIL JE LIEVER EEN FILM KIJKEN</that>
     <template>Sorry, dan kan ik je niet helpen. </template>
   </category>
@@ -52,7 +52,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS JE WILT EEN _ SERIE KIJKEN</that>
     <template> Wat voor soort <set name="medium">serie</set> wil je kijken? </template>
   </category>
@@ -61,7 +61,7 @@
  <!-- GEZELSCHAP-->
  
  <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS JE WILT EEN _ SERIE KIJKEN</that>
     <template> Kijk je deze <get name = "genre"/> <set name = "medium">serie</set> alleen?</template>
   </category>
@@ -70,7 +70,7 @@
 <!-- GEZELSCHAP - alleen -->
 
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that> KIJK JE DEZE _ SERIE ALLEEN</that>
     <template> Ik begrijp het dus goed dat je deze <get name="genre"/> <set name = "medium">serie</set> alleen wilt kijken?</template>
   </category>
@@ -79,13 +79,13 @@
  <!-- GEZELSCHAP - samen --> 
  
    <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE ALLEEN WILT KIJKEN</that>
     <template>Met wie ga je deze serie samen kijken?</template>
   </category>
   
  <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>KIJK JE DEZE _ SERIE ALLEEN</that>
     <template>Met wie ga je deze serie samen kijken?</template>
   </category>
@@ -99,7 +99,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE MET JOUW _ WILT KIJKEN</that>
     <template>Met wie ga je samen kijken?</template>
   </category>
@@ -107,25 +107,25 @@
   
   <!--MINDERJARIG samen-->
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE MET JOUW _ WILT KIJKEN</that>
     <template>Is een van de <set name = "medium">serie</set> kijkers jonger dan 16 jaar?</template>
   </category>
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>IS EEN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er minderjarige <set name = "medium">serie</set> kijkers?</template>
   </category>
   
    <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>IS EEN VAN DE SERIE KIJKERS JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp zijn er geen minderjarige <set name = "medium">serie</set> kijkers?</template>
   </category>
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE SERIE KIJKERS</that>
     <template><condition name="genre" value="actie">
               De beste opties voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen zijn: Arrow. Welke serie heeft jouw voorkeur?
@@ -139,7 +139,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER MINDERJARIGE SERIE KIJKERS</that>
      <template><condition name="genre" value="actie">
              De beste opties voor een <set name ="genre">actie</set> serie zijn: Arrow, The Punisher. Welke serie heeft jouw voorkeur?
@@ -153,7 +153,7 @@
   </category>
   
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE SERIE KIJKERS</that>
     <template><condition name="genre" value="actie">
              De beste opties voor een <set name ="genre">actie</set> serie zijn: Arrow, The Punisher. Welke serie heeft jouw voorkeur?
@@ -167,7 +167,7 @@
   </category>
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP ZIJN ER GEEN MINDERJARIGE SERIE KIJKERS</that>
      <template><condition name="genre" value="actie">
               De beste opties voor een <set name ="genre">actie</set> serie, geschikt voor minderjarigen zijn: Arrow. Welke serie heeft jouw voorkeur?
@@ -184,25 +184,25 @@
   <!-- alleen -->
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>IK BEGRIJP HET DUS GOED DAT JE DEZE _ SERIE ALLEEN WILT KIJKEN</that>
     <template>Ben jij een serie kijker jonger dan 16 jaar?</template>
   </category> 
   
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>BEN JIJ EEN SERIE KIJKER JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp ben je een minderjarige serie kijker?</template>
   </category> 
   
    <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>BEN JIJ EEN SERIE KIJKER JONGER DAN 16 JAAR</that>
     <template>Dus als ik het goed begrijp ben je geen minderjarige serie kijker?</template>
   </category> 
   
    <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
               De beste opties voor een <set name ="genre">actie</set> serie zijn: Blindspot. Welke serie heeft jouw voorkeur?
@@ -216,7 +216,7 @@
     </category>
     
      <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE EEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
               De beste opties voor een<set name ="genre">actie</set> serie zijn: Blindspot. Welke serie heeft jouw voorkeur?
@@ -230,7 +230,7 @@
     </category>
     
     <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
               De beste opties voor een <set name ="genre">actie</set> serie zijn: Blindspot. Welke serie heeft jouw voorkeur?
@@ -244,7 +244,7 @@
     </category>
     
     <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>DUS ALS IK HET GOED BEGRIJP BEN JE GEEN MINDERJARIGE SERIE KIJKER</that>
     <template><condition name="genre" value="actie">
               De beste opties voor een <set name ="genre">actie</set> serie zijn: Blindpsot. Welke serie heeft jouw voorkeur?
@@ -283,14 +283,14 @@
   </category> 
   
   <category>
-    <pattern><set>JA</set></pattern>
+    <pattern><set>JA</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE DE SERIE _ WILT KIJKEN</that>
     <template>
         <get name = "keuze"/>, goede keuze! Veel kijkplezier!</template>
   </category> 
   
   <category>
-    <pattern><set>NEE</set></pattern>
+    <pattern><set>NEE</set>^</pattern>
      <that>HEB IK HET GOED BEGREPEN DAT JE DE SERIE _ WILT KIJKEN</that>
     <template>
         Welke serie wil je graag zien?</template>
