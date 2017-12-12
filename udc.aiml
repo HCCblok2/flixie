@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern><set>recommendation</set>^</pattern>
+    <pattern><set>recommendation</set></pattern>
     <template>Hoi, ik ben Flixie! Ik help je met het vinden van een serie of een film. 
     Welke van de twee wil je graag kijken?</template>
   </category>

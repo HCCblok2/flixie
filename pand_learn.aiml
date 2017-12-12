@@ -27,6 +27,8 @@
 <category> <pattern><set>recommendation</set> ACTION SERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
 
 
+<category> <pattern><set>recommendation</set> ACTIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+
 <category> <pattern><set>recommendation</set> ACTIEFILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
 <category> <pattern><set>recommendation</set> ACTIE FILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
@@ -77,6 +79,8 @@
 <category> <pattern>COMEDIESERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
 
+<category> <pattern><set>recommendation</set> KOMEDIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+ 
 <category> <pattern><set>recommendation</set> KOMEDIE FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
 <category> <pattern><set>recommendation</set> KOMEDIEFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> fikm kijken?</template></category>
@@ -118,6 +122,8 @@
 
 <category> <pattern>DRAMASERIE ^</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
 
+
+<category> <pattern><set>recommendation</set> DRAMA</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
 
 <category> <pattern><set>recommendation</set> DRAMAFILM ^</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
 
