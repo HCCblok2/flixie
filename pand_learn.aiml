@@ -1,133 +1,130 @@
 <aiml version="2.0">
 
-<category><pattern>^ SERIE</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">serie</set> wilt kijken?</template></category>
+<category><pattern>^ SERIE ^</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">serie</set> wilt kijken?</template></category>
 
-<category><pattern>^ FILM</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">film</set> wilt kijken?</template></category>
+<category><pattern>^ FILM ^</pattern><template>Heb ik het goed begrepen dat je een <set name="medium">film</set> wilt kijken?</template></category>
 
 <!-- ACTIE -->         
-<category> <pattern>ACTION</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
+<category> <pattern>ACTION ^</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
 
-<category> <pattern>ACTIONFILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+<category> <pattern>ACTIONFILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
-<category> <pattern>ACTION FILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+<category> <pattern>ACTION FILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
-<category> <pattern>ACTIONSERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+<category> <pattern>ACTIONSERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
 
-<category> <pattern>ACTION SERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
-
-
-<category> <pattern><set>recommendation</set> ACTION</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> ACTIONFILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> ACTION FILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> ACTIONSERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> ACTION SERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+<category> <pattern>ACTION SERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
 
 
-<category> <pattern><set>recommendation</set> ACTIEFILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTION ^</pattern><template> Dus je wilt een <set name="genre">actie</set> <get name="medium"/> kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> ACTIE FILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTIONFILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> ACTIE SERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTION FILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
-<category> <pattern> <set>recommendation</set> ACTIESERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTIONSERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> ACTION SERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
 
 
-<category> <pattern>ACTIEFILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTIEFILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
-<category> <pattern>ACTIE FILM</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTIE FILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
 
-<category> <pattern>ACTIE SERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+<category> <pattern><set>recommendation</set> ACTIE SERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
 
-<category> <pattern>ACTIESERIE</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+<category> <pattern> <set>recommendation</set> ACTIESERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+
+
+<category> <pattern>ACTIEFILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+
+<category> <pattern>ACTIE FILM ^</pattern><template> Dus je wilt een <set name="genre">actie</set> film kijken?</template></category>
+
+<category> <pattern>ACTIE SERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
+
+<category> <pattern>ACTIESERIE ^</pattern><template> Dus je wilt een <set name="genre">actie</set> serie kijken?</template></category>
 
 <!-- COMEDY--> 
 
-<category> <pattern>KOMEDIE FILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern>KOMEDIE FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern>KOMEDIEFILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern>KOMEDIEFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern>KOMEDIE SERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern>KOMEDIE SERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
-<category> <pattern>KOMEDIESERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
-
-
-<category> <pattern>COMEDY</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
-
-<category> <pattern>COMEDY FILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
-
-<category> <pattern>COMEDYFILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
-
-<category> <pattern>COMEDY SERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
-
-<category> <pattern>COMEDYSERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern>KOMEDIESERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
 
-<category> <pattern>COMEDIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
+<category> <pattern>COMEDY ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
 
-<category> <pattern>COMEDIE FILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern>COMEDY FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern>COMEDIEFILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern>COMEDYFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern>COMEDIE SERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern>COMEDY SERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
-<category> <pattern>COMEDIESERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
-
-
-<category> <pattern><set>recommendation</set> KOMEDIE FILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> KOMEDIEFILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> fikm kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> KOMEDIE SERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
-
-<category> <pattern><set>recommendation</set> KOMEDIESERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern>COMEDYSERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
 
-<category> <pattern><set>recommendation</set> COMEDY</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name = "medium"/> kijken?</template></category>
+<category> <pattern>COMEDIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDY FILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern>COMEDIE FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDYFILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern>COMEDIEFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDY SERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern>COMEDIE SERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDYSERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern>COMEDIESERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
 
-<category> <pattern><set>recommendation</set> COMEDIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
+<category> <pattern><set>recommendation</set> KOMEDIE FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDIE FILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> KOMEDIEFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> fikm kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDIEFILM</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> KOMEDIE SERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDIE SERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+<category> <pattern><set>recommendation</set> KOMEDIESERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> COMEDIESERIE</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDY ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name = "medium"/> kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDY FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDYFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDY SERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDYSERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+
+
+<category> <pattern><set>recommendation</set> COMEDIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> <get name="medium"/> kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDIE FILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDIEFILM ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> film kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDIE SERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
+
+<category> <pattern><set>recommendation</set> COMEDIESERIE ^</pattern><template> Dus je wilt een <set name="genre">komedie</set> serie kijken?</template></category>
 
 
 <!-- DRAMA --> 
 
-<category> <pattern>DRAMAFILM</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
+<category> <pattern>DRAMAFILM ^</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
 
-<category> <pattern>DRAMA FILM</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
+<category> <pattern>DRAMA FILM ^</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
 
-<category> <pattern>DRAMA SERIE</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
+<category> <pattern>DRAMA SERIE ^</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
 
-<category> <pattern>DRAMASERIE</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
+<category> <pattern>DRAMASERIE ^</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
 
 
-<category> <pattern><set>recommendation</set> DRAMAFILM</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> DRAMAFILM ^</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> DRAMA FILM</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
+<category> <pattern><set>recommendation</set> DRAMA FILM ^</pattern><template> Dus je wilt een <set name="genre">drama</set> film kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> DRAMA SERIE</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
+<category> <pattern><set>recommendation</set> DRAMA SERIE ^</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
 
-<category> <pattern><set>recommendation</set> DRAMASERIE</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
-
-    
-
+<category> <pattern><set>recommendation</set> DRAMASERIE ^</pattern><template> Dus je wilt een <set name="genre">drama</set> serie kijken?</template></category>
 
 </aiml>

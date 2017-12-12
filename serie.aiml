@@ -3,7 +3,7 @@
 
  <!-- MEDIUM -->
  <category>
-      <pattern><set>recommendation</set>SERIE</pattern>
+      <pattern><set>recommendation</set>SERIE ^</pattern>
       <template> <think><set name="medium">serie</set></think>
       Heb ik het goed begrepen dat je een <set name="medium">serie</set> wilt kijken?
       </template>
